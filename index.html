@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chiara Capotorto Dog Trainer</title>
+  <style>
+    * {margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+    body {background-color:#fff9f9;color:#333;line-height:1.6;overflow-x:hidden;}
+
+    /* ===== HEADER NUVOLETTA ===== */
+    header {
+      position:relative;
+      background:linear-gradient(135deg,#f7a6b8,#fdd2da);
+      color:#fff;
+      text-align:center;
+      padding:3.5rem 1rem 6rem;
+      overflow:hidden;
+      box-shadow:0 6px 22px rgba(0,0,0,0.15);
+    }
+    header::after {
+      content:"";
+      position:absolute;bottom:-1px;left:-5%;
+      width:110%;height:140px;background:#fff9f9;
+      border-top-left-radius:55% 80%;border-top-right-radius:55% 80%;
+      transform:rotate(-2deg);
+      box-shadow:0 -10px 25px rgba(0,0,0,0.05) inset;
+      z-index:1;
+    }
+    header h1 {
+      font-size:2.8rem;letter-spacing:1px;font-weight:700;
+      text-shadow:1px 2px 5px rgba(0,0,0,0.15);position:relative;z-index:2;
+    }
+    nav {margin-top:1.5rem;position:relative;z-index:2;}
+    nav a {
+      color:rgba(255,255,255,0.95);text-decoration:none;margin:0 15px;
+      font-weight:500;padding:10px 18px;border-radius:999px;
+      background:rgba(255,255,255,0.08);transition:all 0.25s ease;
+    }
+    nav a:hover {background:rgba(255,255,255,0.16);transform:translateY(-3px);}
+
+    /* ===== HERO ===== */
+    .hero {
+      position:relative;
+      background:linear-gradient(180deg,#ffeef0 0%,#fff9f9 100%);
+      display:flex;flex-wrap:wrap;align-items:center;justify-content:center;
+      padding:4rem 2rem 7rem;overflow:hidden;
+    }
+    .hero-text {flex:1;min-width:280px;padding:1rem;text-align:center;z-index:2;}
+    .hero-text h2 {font-size:2.2rem;color:#d46a85;}
+    .hero-text p {margin:1rem 0;font-size:1.1rem;max-width:640px;margin-inline:auto;}
+    .hero-text button {
+      background:#d46a85;color:white;border:none;padding:0.9rem 1.8rem;
+      border-radius:40px;cursor:pointer;transition:0.3s;font-size:1rem;
+      box-shadow:0 4px 8px rgba(212,106,133,0.4);
+    }
+    .hero-text button:hover {background:#b94f6b;transform:scale(1.05);}
+    .hero img {
+      flex:1;max-width:400px;margin-top:1rem;border-radius:25px;
+      box-shadow:0 10px 20px rgba(0,0,0,0.15);z-index:2;
+    }
+
+    /* ===== SECTIONS ===== */
+    section {padding:4rem 2rem;text-align:center;position:relative;z-index:1;}
+    h3.section-title {color:#d46a85;margin-bottom:1.5rem;font-size:1.8rem;}
+
+    .chi-sono,.servizi,.approccio,.galleria,.testimonianze,.prenota {
+      background-color:#fff;margin:2rem auto;border-radius:25px;
+      max-width:1000px;box-shadow:0 4px 10px rgba(0,0,0,0.05);padding:2rem;
+    }
+    .chi-sono img {
+      width:200px;border-radius:50%;margin-bottom:1rem;
+      box-shadow:0 4px 10px rgba(0,0,0,0.15);
+    }
+    .servizi-container {
+      display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem;
+    }
+    .servizio {
+      background-color:#ffeef0;border-radius:20px;padding:1.5rem;max-width:280px;
+      transition:0.3s;box-shadow:0 4px 10px rgba(0,0,0,0.05);
+    }
+    .servizio:hover {transform:translateY(-5px);box-shadow:0 6px 15px rgba(0,0,0,0.1);}
+    .servizio img {width:80px;margin-bottom:1rem;}
+    .approccio p {max-width:700px;margin:auto;font-size:1.1rem;}
+    .galleria img {
+      width:250px;height:180px;object-fit:cover;border-radius:20px;
+      margin:0.5rem;box-shadow:0 5px 12px rgba(0,0,0,0.1);
+    }
+    .testimonianza {
+      background-color:#fff0f4;border-left:4px solid #d46a85;
+      margin:1rem auto;padding:1rem;max-width:700px;border-radius:10px;font-style:italic;
+    }
+    .prenota button {
+      background:#d46a85;color:white;border:none;padding:0.9rem 1.8rem;
+      border-radius:40px;cursor:pointer;transition:0.3s;font-size:1rem;
+      box-shadow:0 4px 8px rgba(212,106,133,0.4);
+    }
+    .prenota button:hover {background:#b94f6b;transform:scale(1.05);}
+    footer {
+      background-color:#f7a6b8;color:white;text-align:center;
+      padding:2rem 1rem;margin-top:2rem;
+      border-top-left-radius:30% 10%;border-top-right-radius:30% 10%;
+    }
+    footer p {margin-top:1rem;font-size:0.9rem;}
+    footer a {color:white;text-decoration:none;font-weight:500;}
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Chiara Capotorto Dog Trainer</h1>
+    <nav>
+      <a href="#chi-sono">Chi sono</a>
+      <a href="#servizi">Servizi</a>
+      <a href="#approccio">Metodo</a>
+      <a href="#galleria">Galleria</a>
+      <a href="#testimonianze">Testimonianze</a>
+      <a href="#prenota">Prenota</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Ritrova l’armonia con il tuo cane 💗</h2>
+      <p>
+        Ciao, sono <strong>Chiara Capotorto</strong>! Aiuto le persone a costruire
+        una relazione serena e rispettosa con il proprio cane attraverso un
+        approccio <strong>gentile, empatico e personalizzato</strong>.
+        <br><br>
+        Se le passeggiate sono un incubo, il tuo cane non ti ascolta o ti senti
+        sopraffatto, posso aiutarti a capire come comunicare meglio con lui.
+      </p>
+      <button onclick="document.getElementById('prenota').scrollIntoView({behavior:'smooth'})">
+        Prenota una consulenza gratuita
+      </button>
+    </div>
+    <img src="cane_fiori.jpg" alt="Chiara Capotorto con cane in illustrazione dolce e colorata">
+  </section>
+
+  <section id="chi-sono" class="chi-sono">
+    <h3 class="section-title">Chi sono</h3>
+    <img src="foto_chiara.jpg" alt="Foto Chiara Capotorto">
+    <p>
+      Mi chiamo Chiara e da anni mi occupo di <strong>educazione cinofila</strong> con
+      l’obiettivo di aiutare le famiglie a vivere con il proprio cane in modo
+      armonioso e consapevole.  
+      <br><br>
+      Credo profondamente nella <strong>relazione</strong> come punto di partenza:
+      capire chi è davvero il tuo cane, come comunica, quali sono i suoi bisogni
+      e le sue emozioni è la chiave per ogni percorso di crescita insieme.
+    </p>
+  </section>
+
+  <section id="servizi" class="servizi">
+    <h3 class="section-title">Cosa posso fare per te</h3>
+    <div class="servizi-container">
+      <div class="servizio">
+        <img src="icona_cuccioli.png" alt="Icona cuccioli">
+        <h4>Educazione Cuccioli</h4>
+        <p>Ti accompagno nei primi mesi per creare routine, socializzazione e fiducia reciproca.</p>
+      </div>
+      <div class="servizio">
+        <img src="icona_obbedienza.png" alt="Icona obbedienza">
+        <h4>Educazione Base</h4>
+        <p>Impara a comunicare davvero col tuo cane: attenzione, calma, collaborazione e gestione al guinzaglio.</p>
+      </div>
+      <div class="servizio">
+        <img src="icona_relazione.png" alt="Icona relazione">
+        <h4>Rieducazione Comportamentale</h4>
+        <p>Affrontiamo insieme paure, ansia, reattività o comportamenti difficili con empatia e rispetto.</p>
+      </div>
+      <div class="servizio">
+        <img src="icona_online.png" alt="Icona online">
+        <h4>Consulenze Online</h4>
+        <p>Sessioni via Zoom per chi vive lontano o preferisce la comodità del proprio ambiente.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="approccio" class="approccio">
+    <h3 class="section-title">Il mio metodo</h3>
+    <p>
+      Ogni cane è un individuo unico. Il mio metodo si basa sull’<strong>ascolto reciproco</strong>,
+      sul rinforzo positivo e sulla costruzione di fiducia.  
+      <br><br>
+      Nessun percorso “taglia unica”: ogni binomio ha i propri tempi, bisogni e punti di forza.
+      L’obiettivo è aiutarti a diventare la <strong>guida serena e sicura</strong> di cui il tuo cane ha bisogno.
+    </p>
+  </section>
+
+  <section id="galleria" class="galleria">
+    <h3 class="section-title">Momenti felici</h3>
+    <img src="foto_cane1.jpg" alt="Cane in allenamento">
+    <img src="foto_cane2.jpg" alt="Chiara con cane al parco">
+    <img src="foto_cane3.jpg" alt="Cane che gioca">
+  </section>
+
+  <section id="testimonianze" class="testimonianze">
+    <h3 class="section-title">Dicono di me</h3>
+    <div class="testimonianza">“Con Chiara abbiamo riscoperto la calma e la gioia nelle passeggiate. Ora ci capiamo davvero.” — <b>Laura & Max</b></div>
+    <div class="testimonianza">“Ha un approccio dolce ma deciso, trasmette serenità e fiducia sia a noi che al cane.” — <b>Giorgio</b></div>
+  </section>
+
+  <section id="prenota" class="prenota">
+    <h3 class="section-title">Prenota una consulenza</h3>
+    <p>
+      Prenota la tua <strong>consulenza gratuita di 30 minuti</strong> via Zoom per raccontarmi la tua situazione
+      e ricevere i primi consigli pratici per migliorare da subito la relazione con il tuo cane.
+    </p>
+    <button>Prenota ora</button>
+  </section>
+
+  <footer>
+    <div>
+      <a href="mailto:info@chiaracapotorto.it">info@chiaracapotorto.it</a> |
+      <a href="#">Instagram</a> |
+      <a href="#">Facebook</a>
+    </div>
+    <p>© 2025 Chiara Capotorto Dog Trainer — Tutti i diritti riservati</p>
+  </footer>
+
+</body>
+</html>
